@@ -56,7 +56,7 @@ body {
     text-align: center;
 }
 
-.curriculum {
+.curriculum, .missao {
     padding: 10px 20px;
     text-align: center; 
 }
@@ -68,6 +68,20 @@ body {
     background-color: #ddd;
     margin: 2px auto;
     display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #999;
+    font-size: 1.2rem;
+    border-radius: 10px;
+}
+
+.img-placeholder-02 {
+    width: 100%;
+    max-width: 800px;
+    height: 340px;
+    padding-top: 20px;
+    background-color: #ddd;
+    margin: 2px auto;
     align-items: center;
     justify-content: center;
     color: #999;
@@ -154,7 +168,7 @@ body {
     width: 471px;
 }
 
-p {
+.parag_texto {
     text-align: justify;
     margin-left: 10px;
     margin-right: 10px;
