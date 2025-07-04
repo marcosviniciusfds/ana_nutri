@@ -56,9 +56,10 @@ body {
     text-align: center;
 }
 
-.curriculum, .missao {
+.curriculum,
+.missao {
     padding: 10px 20px;
-    text-align: center; 
+    text-align: center;
 }
 
 .img-placeholder-01 {
@@ -172,4 +173,11 @@ body {
     text-align: justify;
     margin-left: 10px;
     margin-right: 10px;
+    width: 100%;
+    box-sizing: border-box;
+    /* Garante que padding e borda não ultrapassem os 100% */
+    margin: 0 auto;
+    /* Remove margens extras laterais */
+    padding: 0 1rem;
+    /* Opcional: adiciona um espaço interno para o texto não encostar nas bordas */
 }
