@@ -29,12 +29,12 @@ body {
   .nav-links a {
     margin-left: 20px;
     text-decoration: none;
-    color: #af7e6c;
+    color: #777676;
     font-weight: bold;
   }
   
   .btn-agendar {
-    background-color: #af7e6c;
+    background-color: #b41717;
     color: white;
     border: none;
     padding: 12px 20px;
@@ -45,7 +45,7 @@ body {
   }
   
   .btn-agendar:hover {
-    background-color: #8e6655;
+    background-color: #58c058;
   }
   
   .banner,
