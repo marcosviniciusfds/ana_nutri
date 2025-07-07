@@ -5,6 +5,10 @@ body {
     color: #333;
 }
 
+h1 {
+    font-family: Kalam Light;
+}
+
 .header {
     background-color: #ffffff;
     padding: 20px;
