@@ -30,3 +30,26 @@ document.querySelectorAll('a[href^="#"]').forEach(link => {
     form.reset();
   });
   
+
+  window.addEventListener("scroll", function () {
+    const navbar = document.getElementById("navbar");
+    if (window.scrollY > 50) {
+      navbar.classList.add("transparent");
+    } else {
+      navbar.classList.remove("transparent");
+    }
+  });
+
+  const banner = document.getElementById("banner-nutri");
+
+  const observer = new IntersectionObserver(entries => {
+    entries.forEach(entry => {
+      if (entry.isIntersecting) {
+        banner.classList.add("aparecendo");
+      }
+    });
+  }, {
+    threshold: 0.3 // ativa quando 30% do elemento aparecer
+  });
+
+  observer.observe(banner);

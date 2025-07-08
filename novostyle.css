@@ -111,3 +111,42 @@ body {
   width: 100%;
   height: auto;
 }
+
+.navbar {
+  position: fixed;
+  top: 0;
+  width: 100%;
+  padding: 1rem 2rem;
+  background-color: rgba(255, 255, 255, 1); /* Cor sólida inicial */
+  color: black;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  z-index: 999;
+  transition: background-color 0.3s ease;
+  box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+}
+
+.navbar.transparent {
+  background-color: rgba(255, 255, 255, 0.6); /* Transparente no scroll */
+  backdrop-filter: blur(5px); /* Efeito vidro fosco */
+}
+
+.banner {
+  opacity: 0;
+  transform: translateY(80px);
+  transition: all 5s ease;
+}
+
+.banner.aparecendo {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.oculto {
+  visibility: hidden;
+}
+
+.aparecendo {
+  visibility: visible;
+}
