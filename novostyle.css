@@ -150,3 +150,70 @@ body {
 .aparecendo {
   visibility: visible;
 }
+
+
+
+
+ul {
+  list-style: none;
+}
+
+ul#wrap {
+  position: relative;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 830px;
+  overflow: hidden;
+}
+
+ul#wrap li {
+  float: left;
+  width: 400px;
+  /*ajusta a largura das imagens*/
+  height: 400px;
+  /*ajusta a altura das imagens*/
+  position: relative;
+}
+
+ul#wrap li:nth-child(n) {
+  margin: 0 10px 0 0;
+}
+
+ul#wrap li:nth-child(4n) {
+  margin: 0 0 10px 0;
+}
+
+ul#wrap li:last-child {
+  margin: 0;
+}
+
+ul#wrap li img {
+  border: none;
+  width: 100%;
+  height: 100%;
+}
+
+ul#wrap li span {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  height: 100%;
+  transition: .6s;
+  /*suavidade do hover, quanto mais alto o valor mais suve*/
+  background-color: rgba(0, 0, 0, 0.5);
+  /*cor do efeito hover*/
+  position: absolute;
+  top: 0;
+  left: 0;
+  color: #000;
+  /* cor do texto*/
+  text-transform: uppercase;
+}
+
+ul#wrap li:hover span {
+  background: transparent;
+  color: #fff;
+  /* cor do texto ao passar o mouse*/
+}
