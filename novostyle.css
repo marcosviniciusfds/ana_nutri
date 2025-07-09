@@ -49,7 +49,7 @@ body {
 }
 
 .hero-content p {
-  font-size: 1rem;
+  font-size: 1.4rem;
   margin-bottom: 1.5rem;
   color: #f7e380;
 }
@@ -87,7 +87,7 @@ body {
   padding: 0.5rem 1rem;
   background-color: #89d0bd;
   color: #000;
-  font-size: 10px;
+  font-size: 1rem;
   font-weight: bold;
   text-decoration: none;
   border-radius: 5px;

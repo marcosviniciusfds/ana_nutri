@@ -13,6 +13,10 @@ h1 {
     font-family: Kalam Light;
 }
 
+p {
+    font-size: 1.4rem;
+}
+
 .header {
     background-color: #ffffff;
     padding: 20px;
