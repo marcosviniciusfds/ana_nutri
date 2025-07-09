@@ -247,8 +247,32 @@ ul#wrap li span {
   text-transform: uppercase;
 }
 
-ul#wrap li:hover span {
-  background: transparent;
-  color: #fff;
-  /* cor do texto ao passar o mouse*/
+.telefone-container {
+  display: flex;
+  align-items: center;
+  background-color: #f0f0f0;
+  text-align: center;
+  padding: 10px 55px;
+  border-radius: 12px;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+  max-width: 300px;
+  margin: 10px auto;
+  transition: background-color 0.3s ease;
+}
+
+.telefone-container:hover {
+  background-color: #cac4c4;
+}
+
+.icone-telefone {
+  font-size: 28px;
+  color: #0a84ff;
+  margin-right: 12px;
+}
+
+.numero-telefone {
+  font-size: 18px;
+  font-weight: bold;
+  color: #333;
+  word-break: break-word;
 }
