@@ -5,6 +5,10 @@ body {
     color: #333;
 }
 
+.cor-back {
+    background: linear-gradient(105deg, rgba(172, 32, 61, 1) 0%, rgba(166, 35, 61, 1) 67%, rgba(212, 74, 102, 1) 100%);
+}
+
 h1 {
     font-family: Kalam Light;
 }
@@ -54,9 +58,18 @@ h1 {
 
 .banner,
 .section,
-.agendamento,
-.mapa {
+.agendamento {
     padding: 60px 20px;
+    text-align: center;
+}
+
+.mapa {
+    display: flex;
+    padding: 60px 20px;
+    text-align: center;
+}
+
+.end-maps {
     text-align: center;
 }
 
@@ -70,7 +83,7 @@ h1 {
     width: 100%;
     max-width: 800px;
     height: 180px;
-    background-color: #ddd;
+    background-color: none;
     margin: 2px auto;
     display: flex;
     align-items: center;
@@ -185,3 +198,4 @@ h1 {
     padding: 0 1rem;
     /* Opcional: adiciona um espaço interno para o texto não encostar nas bordas */
 }
+

@@ -53,3 +53,18 @@ document.querySelectorAll('a[href^="#"]').forEach(link => {
   });
 
   observer.observe(banner);
+
+  const banne = document.getElementById("banner-nutri-2");
+
+  const observe = new IntersectionObserver(entries => {
+    entries.forEach(entry => {
+      if (entry.isIntersecting) {
+        banne.classList.add("aparecendo");
+      }
+    });
+  }, {
+    threshold: 0.3 // ativa quando 30% do elemento aparecer
+  });
+
+  observe.observe(banne);
+  
