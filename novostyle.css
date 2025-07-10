@@ -4,14 +4,6 @@
   box-sizing: border-box;
 }
 
-body {
-  font-family: 'Segoe UI', sans-serif;
-  background-image: url(imagem/variedade-00235664-real.jpg);
-  width: 100%;
-  height: auto;
-  color: #f7e380;
-}
-
 .hero-section {
   display: flex;
   justify-content: space-between;
@@ -100,12 +92,13 @@ body {
 
 
 .hero-image img {
-  width: 520px;
+  width: 820px;
   border-radius: 10px;
+  opacity: 0.2;
 }
 
 .hero-image-dois img {
-  width: 380px;
+  width: 580px;
   border-radius: 10px;
 }
 
@@ -160,13 +153,6 @@ body {
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
 }
 
-.navbar.transparent {
-  background-color: rgba(255, 255, 255, 0.6);
-  /* Transparente no scroll */
-  backdrop-filter: blur(5px);
-  /* Efeito vidro fosco */
-}
-
 .banner {
   opacity: 0;
   transform: translateY(80px);
@@ -185,9 +171,6 @@ body {
 .aparecendo {
   visibility: visible;
 }
-
-
-
 
 ul {
   list-style: none;
@@ -254,7 +237,7 @@ ul#wrap li span {
   text-align: center;
   padding: 10px 55px;
   border-radius: 12px;
-  box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
   max-width: 300px;
   margin: 10px auto;
   transition: background-color 0.3s ease;
@@ -275,4 +258,227 @@ ul#wrap li span {
   font-weight: bold;
   color: #333;
   word-break: break-word;
+}
+
+/* NOVO CSS RESPOCIVO TESTE */
+
+.navbar {
+  background: #fff;
+  padding: 15px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.nav-links {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  margin-top: 10px;
+}
+
+.nav-links a {
+  text-decoration: none;
+  color: #333;
+  font-weight: bold;
+}
+
+.logo {
+  font-size: 20px;
+  text-align: center;
+}
+
+.section {
+  padding: 20px;
+}
+
+.cor-back {
+  background-color: #f4f4f4;
+}
+
+.text {
+  max-width: 800px;
+  margin: auto;
+  padding: 15px;
+}
+
+.hero-image img {
+  width: 80%;
+  height: auto;
+  display: block;
+  margin: 0 auto;
+}
+.hero-image-dois img,
+.hero-image-tres img {
+  width: 30%;
+  height: auto;
+  display: block;
+  margin: 0 auto;
+}
+
+.btn-agendar,
+.btn-agendar-um {
+  display: inline-block;
+  background: #4CAF50;
+  color: #fff;
+  padding: 10px 20px;
+  margin: 10px auto;
+  text-decoration: none;
+  text-align: center;
+  border-radius: 5px;
+}
+
+.agendamento form {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  max-width: 500px;
+  margin: auto;
+  padding: 15px;
+}
+
+.agendamento input,
+.agendamento textarea {
+  padding: 10px;
+  width: 100%;
+  box-sizing: border-box;
+}
+
+.telefone-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-top: 20px;
+}
+
+.icone-telefone {
+  margin-right: 10px;
+  color: #4CAF50;
+}
+
+.mapa {
+  padding: 20px;
+}
+
+.mapa-container {
+  margin-bottom: 30px;
+}
+
+.mapa-container iframe {
+  width: 100%;
+  max-width: 100%;
+  height: auto;
+  aspect-ratio: 4 / 3;
+  border: 0;
+}
+
+.footer {
+  background-color: #af7e6c;
+  color: #fff;
+  text-align: center;
+  padding: 10px;
+}
+
+@media (min-width: 768px) {
+  .navbar {
+    flex-direction: row;
+    justify-content: space-between;
+  }
+
+  .nav-links {
+    flex-direction: row;
+    gap: 20px;
+  }
+
+  .hero-section {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    gap: 20px;
+    flex-wrap: wrap;
+  }
+
+  .section {
+    padding: 40px;
+  }
+}
+
+/* --- nav bar --- */
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.navbar {
+  background-color: rgba(255, 255, 255, 0.6);
+  /* Transparente no scroll */
+  backdrop-filter: blur(5px);
+  /* Efeito vidro fosco */
+}
+
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px 20px;
+  color: rgb(109, 93, 93);
+}
+
+.logo {
+  font-size: 1.5em;
+  font-weight: bold;
+}
+
+.nav-links {
+  list-style: none;
+  display: flex;
+  gap: 20px;
+}
+
+.nav-links a {
+  text-decoration: none;
+  color: rgb(109, 93, 93);
+  transition: color 0.3s;
+}
+
+.nav-links a:hover {
+  color: #ffcc00;
+}
+
+.menu-toggle {
+  display: none;
+  flex-direction: column;
+  cursor: pointer;
+  gap: 5px;
+}
+
+.bar {
+  width: 25px;
+  height: 3px;
+  background-color: black;
+  transition: 0.3s;
+}
+
+/* Responsivo: oculta menu e mostra ícone no celular */
+@media (max-width: 768px) {
+  .nav-links {
+    position: absolute;
+    top: 60px;
+    right: 0;
+    background-color: rgba(255, 255, 255, 0.253);
+    width: 100%;
+    flex-direction: column;
+    align-items: center;
+    display: none;
+  }
+
+  .nav-links.active {
+    display: block;
+  }
+
+  .menu-toggle {
+    display: flex;
+  }
 }

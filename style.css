@@ -1,8 +1,10 @@
 body {
     margin: 0;
-    font-family: "Arial", sans-serif;
-    background-color: #f8f5f2;
-    color: #333;
+    background-image: url(imagem/variedade-00235664-real.jpg);
+    width: 100%;
+    font-family: Arial, sans-serif;
+    line-height: 1.6;
+
 }
 
 .cor-back {
@@ -12,9 +14,13 @@ body {
 h1 {
     font-family: Kalam Light;
 }
+h2, h3{
+    color: #f7e380;
+}
 
 p {
     font-size: 1.4rem;
+    color: #f7e380;
 }
 
 .header {
@@ -44,7 +50,9 @@ p {
     color: #777676;
     font-weight: bold;
 }
-
+.btn-whatsapp, .btn-instagram {
+    margin: 1.1rem;
+}
 .btn-agendar {
     background-color: #b41717;
     color: white;
@@ -166,27 +174,6 @@ p {
     padding: 20px;
 }
 
-/* Responsividade */
-@media (max-width: 768px) {
-    .nav {
-        flex-direction: column;
-        align-items: flex-start;
-    }
-
-    .nav-links {
-        margin-top: 10px;
-    }
-
-    .img-placeholder {
-        height: 250px;
-    }
-
-    .btn-agendar {
-        width: 100%;
-        text-align: center;
-    }
-}
-
 .banner_img {
     width: 471px;
 }
@@ -204,3 +191,12 @@ p {
     /* Opcional: adiciona um espaço interno para o texto não encostar nas bordas */
 }
 
+.textparag01 {
+    text-align: left;
+    font-size: 26px;
+    font-weight: bold;
+}
+
+.textparag02 {
+    text-align: justify;
+}
