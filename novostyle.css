@@ -4,6 +4,34 @@
   box-sizing: border-box;
 }
 
+body {
+  margin: 0;
+  background-image: url(imagem/variedade-00235664-real.jpg);
+  width: 100%;
+  font-family: Arial, sans-serif;
+  line-height: 1.6;
+
+}
+
+
+h1 {
+  font-family: Kalam Light;
+}
+h2, h3{
+  color: #f7e380;
+}
+
+p {
+  font-size: 1.4rem;
+  color: #f7e380;
+}
+
+.cor-back {
+  background: linear-gradient(105deg, rgba(172, 32, 61, 1) 0%, rgba(166, 35, 61, 1) 67%, rgba(212, 74, 102, 1) 100%);
+}
+
+
+
 .hero-section {
   display: flex;
   justify-content: space-between;
@@ -44,6 +72,19 @@
   font-size: 1.4rem;
   margin-bottom: 1.5rem;
   color: #f7e380;
+}
+
+.banner,
+.section,
+.agendamento {
+    padding: 60px 20px;
+    text-align: center;
+}
+
+.mapa {
+    display: flex;
+    padding: 60px 20px;
+    text-align: center;
 }
 
 .btn-agendar {
@@ -260,6 +301,13 @@ ul#wrap li span {
   word-break: break-word;
 }
 
+.mapa-container {
+  max-width: 800px;
+  margin: 0 auto;
+  border-radius: 10px;
+  overflow: hidden;
+}
+
 /* NOVO CSS RESPOCIVO TESTE */
 
 .navbar {
@@ -470,12 +518,12 @@ ul#wrap li span {
     background-color: rgba(255, 255, 255, 0.253);
     width: 100%;
     flex-direction: column;
-    align-items: center;
+    padding: 20px 0;
     display: none;
   }
 
   .nav-links.active {
-    display: block;
+    display: center;
   }
 
   .menu-toggle {
