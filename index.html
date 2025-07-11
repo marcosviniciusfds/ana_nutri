@@ -160,16 +160,14 @@
   <section id="agendamento" class="agendamento">
     <h2>Agende sua Consulta</h2>
     <form id="form-agendamento">
-      <input type="text" name="nome" placeholder="Seu nome" autocomplete="off" required />
-      <input type="email" name="email" placeholder="Seu e-mail" autocomplete="off" required />
-      <input type="tel" name="telefone" placeholder="Telefone para contato" autocomplete="off" required />
-      <textarea name="mensagem" rows="4" placeholder="Mensagem ou motivo da consulta" autocomplete="off"
-        required></textarea>
+      <input type="text" id="nome" placeholder="Seu nome" autocomplete="off" required />
+      <input type="email" id="email" placeholder="Seu e-mail" autocomplete="off" required />
+      <input type="tel" id="telefone" placeholder="Telefone para contato" autocomplete="off" required />
+      <textarea id="mensagem" rows="4" placeholder="Mensagem ou motivo da consulta" required></textarea>
       <button type="submit" class="btn-agendar">Enviar Agendamento</button>
-      <p id="msg-sucesso" class="msg-sucesso" style="display:none;">Agendamento enviado com sucesso!</p>
     </form>
   </section>
-
+  
   <div id="telefone" class="telefone-container">
     <i class="fas fa-phone icone-telefone"></i>
     <span class="numero-telefone">(85) 98527-9267</span>

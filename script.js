@@ -68,13 +68,6 @@ const observe = new IntersectionObserver(entries => {
 
 observe.observe(banne);
 
-//const menuToggle = document.getElementById('menu-toggle');
-//const navLinks = document.getElementById('nav-links');
-
-//menuToggle.addEventListener('click', () => {
-//  navLinks.classList.toggle('active');
-//});
-
 //Novo elemento...
 
 const hamburger = document.getElementById('hamburger');
@@ -82,4 +75,27 @@ const navLinks = document.getElementById('nav-links');
 
 hamburger.addEventListener('click', () => {
   navLinks.classList.toggle('active');
+});
+
+document.getElementById("form-agendamento").addEventListener("submit", function (e) {
+  e.preventDefault();
+
+  // Dados do formulário
+
+  const nome = document.getElementById("nome").value;
+  const email = document.getElementById("email").value;
+  const telefone = document.getElementById("telefone").value;
+  const mensagem = document.getElementById("mensagem").value;
+
+  // Número do WhatsApp de destino (somente números, com DDD e país, ex: 5585987654321)
+  const numero = "5585985279267"; // Ex: 5585987654321
+
+  // Monta a mensagem
+  const texto = `*Agendamento de Consulta:*\n\n🧑 Nome: ${nome}\n📧 E-mail: ${email}\n📞 Telefone: ${telefone}\n💬 Motivo: ${mensagem}`;
+
+  // Codifica a mensagem para URL
+  const url = `https://wa.me/${numero}?text=${encodeURIComponent(texto)}`;
+
+  // Abre o WhatsApp
+  window.open(url, "_blank");
 });
