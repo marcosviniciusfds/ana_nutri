@@ -404,7 +404,7 @@ body {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  background-color: rgba(201, 33, 33, 0.6);
+  background-color: rgba(175, 30, 30, 0.6);
   backdrop-filter: blur(5px);
   padding: 1rem 2rem;
   color: #f7e380;
