@@ -16,25 +16,18 @@
 <body>
   <header>
     <nav class="navbar" id="navbar">
-      <h1>Ana Paula Andrade | Nutricionista Funcional</h1>
-
-      <!-- Ícone do menu hambúrguer -->
-      <div class="menu-toggle" id="menu-toggle">
-        <div class="bar"></div>
-        <div class="bar"></div>
-        <div class="bar"></div>
-      </div>
-
-      <!-- Itens do menu -->
+      <div class="logo">Ana Paula Andrade | Nutricionista Funcional</div>
+      <button class="hamburger" id="hamburger">&#9776;</button>
       <ul class="nav-links" id="nav-links">
-        <a href="https://wa.me/+5585985279267" target="_blank">WhatsApp</a>
-        <a href="https://www.instagram.com/nutrianapaulaandrade/#" target="_blank">Instagram</a>
+        <li><a href="#inicio">Início</a></li>
+        <li><a href="https://wa.me/+5585985279267" target="_blank">WhatsApp</a></li>
+        <li><a href="https://www.instagram.com/nutrianapaulaandrade/#" target="_blank">Instagram</a></li>
+        <li><a href="#telefone">Contato</a></li>
       </ul>
     </nav>
   </header>
-
   <!--  Quadro 01 esta ok  -->
-  <section class="section cor-back">
+  <section class="section cor-back" id="inicio">
     <div class="hero-image-tres">
       <img src="imagem/Logo_30224_0000.png" alt="Doutora" />
     </div>
@@ -177,7 +170,7 @@
     </form>
   </section>
 
-  <div class="telefone-container">
+  <div id="telefone" class="telefone-container">
     <i class="fas fa-phone icone-telefone"></i>
     <span class="numero-telefone">(85) 98527-9267</span>
   </div>

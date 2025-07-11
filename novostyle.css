@@ -17,7 +17,9 @@ body {
 h1 {
   font-family: Kalam Light;
 }
-h2, h3{
+
+h2,
+h3 {
   color: #f7e380;
 }
 
@@ -77,14 +79,14 @@ p {
 .banner,
 .section,
 .agendamento {
-    padding: 60px 20px;
-    text-align: center;
+  padding: 60px 20px;
+  text-align: center;
 }
 
 .mapa {
-    display: flex;
-    padding: 60px 20px;
-    text-align: center;
+  display: flex;
+  padding: 60px 20px;
+  text-align: center;
 }
 
 .btn-agendar {
@@ -176,22 +178,6 @@ p {
 .whatsapp-float img {
   width: 100%;
   height: auto;
-}
-
-.navbar {
-  position: fixed;
-  top: 0;
-  width: 100%;
-  padding: 1rem 2rem;
-  background-color: rgba(255, 255, 255, 1);
-  /* Cor sólida inicial */
-  color: black;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  z-index: 999;
-  transition: background-color 0.3s ease;
-  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
 }
 
 .banner {
@@ -308,34 +294,6 @@ ul#wrap li span {
   overflow: hidden;
 }
 
-/* NOVO CSS RESPOCIVO TESTE */
-
-.navbar {
-  background: #fff;
-  padding: 15px;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-}
-
-.nav-links {
-  display: flex;
-  flex-direction: column;
-  gap: 10px;
-  margin-top: 10px;
-}
-
-.nav-links a {
-  text-decoration: none;
-  color: #333;
-  font-weight: bold;
-}
-
-.logo {
-  font-size: 20px;
-  text-align: center;
-}
-
 .section {
   padding: 20px;
 }
@@ -356,6 +314,7 @@ ul#wrap li span {
   display: block;
   margin: 0 auto;
 }
+
 .hero-image-dois img,
 .hero-image-tres img {
   width: 30%;
@@ -427,31 +386,7 @@ ul#wrap li span {
   padding: 10px;
 }
 
-@media (min-width: 768px) {
-  .navbar {
-    flex-direction: row;
-    justify-content: space-between;
-  }
-
-  .nav-links {
-    flex-direction: row;
-    gap: 20px;
-  }
-
-  .hero-section {
-    display: flex;
-    justify-content: space-around;
-    align-items: center;
-    gap: 20px;
-    flex-wrap: wrap;
-  }
-
-  .section {
-    padding: 40px;
-  }
-}
-
-/* --- nav bar --- */
+/* NAVBAR NOVO */
 
 * {
   margin: 0;
@@ -459,74 +394,76 @@ ul#wrap li span {
   box-sizing: border-box;
 }
 
-.navbar {
-  background-color: rgba(255, 255, 255, 0.6);
-  /* Transparente no scroll */
-  backdrop-filter: blur(5px);
-  /* Efeito vidro fosco */
+body {
+  font-family: Arial, sans-serif;
+  padding-top: 70px;
+  /* Altura do navbar para evitar sobreposição */
 }
 
 .navbar {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 10px 20px;
-  color: rgb(109, 93, 93);
+  background-color: rgba(201, 33, 33, 0.6);
+  backdrop-filter: blur(5px);
+  padding: 1rem 2rem;
+  color: #f7e380;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 1000
 }
 
 .logo {
-  font-size: 1.5em;
+  font-size: 1.5rem;
   font-weight: bold;
 }
 
 .nav-links {
   list-style: none;
   display: flex;
-  gap: 20px;
+  gap: 1.5rem;
 }
 
 .nav-links a {
   text-decoration: none;
-  color: rgb(109, 93, 93);
+  color: #f7e380;
   transition: color 0.3s;
 }
 
 .nav-links a:hover {
-  color: #ffcc00;
+  color: #19d400;
 }
 
-.menu-toggle {
+.hamburger {
   display: none;
-  flex-direction: column;
+  font-size: 2rem;
+  background: none;
+  border: none;
+  color: #f7e380;
   cursor: pointer;
-  gap: 5px;
 }
 
-.bar {
-  width: 25px;
-  height: 3px;
-  background-color: black;
-  transition: 0.3s;
-}
-
-/* Responsivo: oculta menu e mostra ícone no celular */
+/* Responsivo */
 @media (max-width: 768px) {
+  .hamburger {
+    display: block;
+  }
+
   .nav-links {
-    position: absolute;
-    top: 60px;
-    right: 0;
-    background-color: rgba(255, 255, 255, 0.253);
-    width: 100%;
     flex-direction: column;
-    padding: 20px 0;
+    background-color: rgba(255, 255, 255, 0.6);
+    backdrop-filter: blur(5px);
+    position: absolute;
+    top: 100%;
+    right: 0;
+    width: 100%;
     display: none;
+    padding: 1rem 2rem;
   }
 
   .nav-links.active {
-    display: center;
-  }
-
-  .menu-toggle {
     display: flex;
   }
 }
