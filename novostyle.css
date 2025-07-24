@@ -13,6 +13,13 @@ body {
 
 }
 
+/* 
+body {
+  font-family: Arial, sans-serif;
+  padding-top: 70px;
+  /* Altura do navbar para evitar sobreposição
+}
+*/
 
 h1 {
   font-family: Kalam Light;
@@ -320,6 +327,7 @@ ul#wrap li span {
   height: auto;
   display: block;
   margin: 0 auto;
+  padding-top: 30px;
 }
 
 .hero-image-dois img,
@@ -399,12 +407,6 @@ ul#wrap li span {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-}
-
-body {
-  font-family: Arial, sans-serif;
-  padding-top: 70px;
-  /* Altura do navbar para evitar sobreposição */
 }
 
 .navbar {
