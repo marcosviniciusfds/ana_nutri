@@ -315,6 +315,13 @@ ul#wrap li span {
   margin: 0 auto;
 }
 
+.hero-image-hum img {
+  width: 12%;
+  height: auto;
+  display: block;
+  margin: 0 auto;
+}
+
 .hero-image-dois img,
 .hero-image-tres img {
   width: 30%;
