@@ -40,8 +40,6 @@ p {
   background: linear-gradient(105deg, rgba(172, 32, 61, 1) 0%, rgba(166, 35, 61, 1) 67%, rgba(212, 74, 102, 1) 100%);
 }
 
-
-
 .hero-section {
   display: flex;
   justify-content: space-between;
