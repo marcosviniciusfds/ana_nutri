@@ -32,7 +32,7 @@ h3 {
 }
 
 p {
-  font-size: 1.4rem;
+  font-size: 1.1rem;
   color: #f7e380;
 }
 
@@ -137,23 +137,6 @@ p {
 
 .btn-agendar-um:hover {
   background-color: #6bb4a5;
-}
-
-
-.hero-image img {
-  width: 820px;
-  border-radius: 10px;
-  opacity: 0.2;
-}
-
-.hero-image-dois img {
-  width: 580px;
-  border-radius: 10px;
-}
-
-.hero-image-tres img {
-  width: 200px;
-  border-radius: 10px;
 }
 
 .section-secundaria {
@@ -312,6 +295,20 @@ ul#wrap li span {
   max-width: 800px;
   margin: auto;
   padding: 15px;
+}
+
+.hero-image img {
+  border-radius: 10px;
+  opacity: 0.2;
+}
+
+.hero-image-dois img { /* imagem */ 
+  border-radius: 10px;
+}
+
+.hero-image-tres img {
+  width: 200px;
+  border-radius: 10px;
 }
 
 .hero-image img {
