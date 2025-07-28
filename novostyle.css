@@ -444,7 +444,7 @@ main {
 .mobile-menu div {
   width: 32px;
   height: 2px;
-  background: #f7e380;
+  background: #fff;
   margin: 8px;
   transition: 0.3s;
 }
