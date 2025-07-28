@@ -13,15 +13,6 @@ body {
 
 }
 
-/* 
-body {
-  font-family: Arial, sans-serif;
-  padding-top: 70px;
-  /* Altura do navbar para evitar sobreposição
-  novo teste  
-}
-*/
-
 h1 {
   font-family: Kalam Light;
 }
@@ -154,7 +145,6 @@ p {
   color: #985ca4;
 }
 
-/* Botão flutuante WhatsApp */
 .whatsapp-float {
   position: fixed;
   bottom: 20px;
@@ -204,9 +194,7 @@ ul#wrap {
 ul#wrap li {
   float: left;
   width: 400px;
-  /*ajusta a largura das imagens*/
   height: 400px;
-  /*ajusta a altura das imagens*/
   position: relative;
 }
 
@@ -235,14 +223,11 @@ ul#wrap li span {
   width: 100%;
   height: 100%;
   transition: .6s;
-  /*suavidade do hover, quanto mais alto o valor mais suve*/
   background-color: rgba(0, 0, 0, 0.5);
-  /*cor do efeito hover*/
   position: absolute;
   top: 0;
   left: 0;
   color: #000;
-  /* cor do texto*/
   text-transform: uppercase;
 }
 
@@ -319,11 +304,11 @@ ul#wrap li span {
 }
 
 .hero-image-hum img {
-  width: 12%;
+  width: 20%;
   height: auto;
   display: block;
   margin: 0 auto;
-  padding-top: 30px;
+  padding-top: 4rem;
 }
 
 .hero-image-dois img,
@@ -405,14 +390,29 @@ ul#wrap li span {
   box-sizing: border-box;
 }
 
-.navbar {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  background-color: rgba(175, 30, 30, 0.6);
-  backdrop-filter: blur(5px);
-  padding: 1rem 2rem;
+a {
   color: #f7e380;
+  text-decoration: none;
+  transition: 0.3s;
+}
+
+a:hover {
+  opacity: 0.7;
+}
+
+.logo {
+  font-size: 1rem;
+  text-transform: uppercase;
+  letter-spacing: 4px;
+}
+
+nav {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  font-family: system-ui, -apple-system, Helvetica, Arial, sans-serif;
+  background: #23232e;
+  height: 8vh;
   position: fixed;
   top: 0;
   left: 0;
@@ -420,55 +420,84 @@ ul#wrap li span {
   z-index: 1000
 }
 
-.logo {
-  font-size: 1.5rem;
-  font-weight: bold;
+main {
+  background: url("bg.jpg") no-repeat center center;
+  background-size: cover;
+  height: 92vh;
 }
 
-.nav-links {
+.nav-list {
   list-style: none;
   display: flex;
-  gap: 1.5rem;
 }
 
-.nav-links a {
-  text-decoration: none;
-  color: #f7e380;
-  transition: color 0.3s;
+.nav-list li {
+  letter-spacing: 3px;
+  margin-left: 32px;
 }
 
-.nav-links a:hover {
-  color: #19d400;
-}
-
-.hamburger {
+.mobile-menu {
   display: none;
-  font-size: 2rem;
-  background: none;
-  border: none;
-  color: #f7e380;
   cursor: pointer;
 }
 
-/* Responsivo */
-@media (max-width: 768px) {
-  .hamburger {
+.mobile-menu div {
+  width: 32px;
+  height: 2px;
+  background: #f7e380;
+  margin: 8px;
+  transition: 0.3s;
+}
+
+@media (max-width: 999px) {
+  body {
+    overflow-x: hidden;
+  }
+  .nav-list {
+    position: absolute;
+    top: 8vh;
+    right: 0;
+    width: 50vw;
+    height: 62vh;
+    background: #23232e;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-around;
+    transform: translateX(100%);
+    transition: transform 0.3s ease-in;
+  }
+  .nav-list li {
+    margin-left: 0;
+    opacity: 0;
+  }
+  .mobile-menu {
     display: block;
   }
+}
 
-  .nav-links {
-    flex-direction: column;
-    background-color: rgba(175, 30, 30, 0.6);
-    backdrop-filter: blur(5px);
-    position: absolute;
-    top: 100%;
-    right: 0;
-    width: 100%;
-    display: none;
-    padding: 1rem 2rem;
-  }
+.nav-list.active {
+  transform: translateX(0);
+}
 
-  .nav-links.active {
-    display: flex;
+@keyframes navLinkFade {
+  from {
+    opacity: 0;
+    transform: translateX(50px);
   }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+.mobile-menu.active .line1 {
+  transform: rotate(-45deg) translate(-8px, 8px);
+}
+
+.mobile-menu.active .line2 {
+  opacity: 0;
+}
+
+.mobile-menu.active .line3 {
+  transform: rotate(45deg) translate(-5px, -7px);
 }
