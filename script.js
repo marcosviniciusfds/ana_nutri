@@ -99,3 +99,4 @@ document.getElementById("form-agendamento").addEventListener("submit", function 
   // Abre o WhatsApp
   window.open(url, "_blank");
 });
+
