@@ -577,31 +577,6 @@ main {
   background: #fff;
 }
 
-.carousel {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  height: 600px;
-  transition: transform 1.5s ease-in-out;
-}
-
-.carousel img {
-  width: 100%;
-  height: 100%;
-  /* ajuste aqui conforme a altura desejada */
-  object-fit: cover;
-  flex-shrink: 0;
-  display: none;
-  border-radius: 0;
-  /* opcional: deixa as bordas quadradas */
-}
-
-.carousel img.active {
-  display: block;
-}
-
-/* CAROUSEL TESTE */
-
 .carousel-container {
   width: 80%;
   overflow: hidden;
@@ -623,4 +598,31 @@ main {
   flex-shrink: 0;
   user-select: none;
   pointer-events: none;
+}
+
+.carousel {
+  position: relative;
+  width: 100%;
+  max-width: 900px; /* ajuste conforme necessário */
+  height: 500px; /* altura fixa para o carrossel */
+  margin: auto;
+  overflow: hidden;
+  background: #000; /* fundo preto para preencher espaços */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.carousel img {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: contain; /* garante que a imagem inteira apareça */
+  display: none;
+}
+
+.carousel img.active {
+  display: block;
 }
