@@ -298,7 +298,6 @@ ul#wrap li span {
 }
 
 .hero-image-dois img {
-  /* imagem */
   border-radius: 10px;
 }
 
@@ -389,6 +388,7 @@ ul#wrap li span {
   justify-content: center;
   align-items: center;
   height: 30vh;
+  margin-top: 5px;
   /* centraliza na tela */
   margin: 0;
 }
