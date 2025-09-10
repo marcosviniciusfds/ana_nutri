@@ -377,7 +377,7 @@ ul#wrap li span {
 .texto-h2 {
   display: inline-block;
   padding: 10px 20px;
-  border: 2px solid gold;
+  border: none;
   border-radius: 15px;
   color:  gold;
   font-size: 24px;
