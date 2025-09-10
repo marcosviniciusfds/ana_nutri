@@ -388,7 +388,7 @@ ul#wrap li span {
   display: flex;
   justify-content: center;
   align-items: center;
-  height: 50vh;
+  height: 30vh;
   /* centraliza na tela */
   margin: 0;
 }
