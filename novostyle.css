@@ -3,7 +3,7 @@
   padding: 0;
   box-sizing: border-box;
 }
-/* teset novo */
+
 body {
   margin: 0;
   background-image: url(imagem/variedade-00235664-real.jpg);
@@ -307,14 +307,14 @@ ul#wrap li span {
 }
 
 .hero-image img {
-  width: 80%;
+  width: 300px;
   height: auto;
   display: block;
   margin: 0 auto;
 }
 
 .hero-image-hum img {
-  width: 20%;
+  width: 220px;
   height: auto;
   display: block;
   margin: 0 auto;
@@ -323,7 +323,7 @@ ul#wrap li span {
 
 .hero-image-dois img,
 .hero-image-tres img {
-  width: 30%;
+  width: 300px;
   height: auto;
   display: block;
   margin: 0 auto;
