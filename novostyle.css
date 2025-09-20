@@ -13,6 +13,13 @@ body {
 
 }
 
+@media (max-width: 768px) {
+  body {
+    background-attachment: scroll; /* melhora performance no mobile */
+    width: 120%;
+  }
+}
+
 h1 {
   font-family: Kalam Light;
 }
@@ -528,12 +535,6 @@ button:hover {
 }
 
 /* NAVBAR NOVO */
-
-* {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-}
 
 a {
   color: #f7e380;
