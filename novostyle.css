@@ -16,7 +16,7 @@ body {
 @media (max-width: 768px) {
   body {
     background-attachment: scroll; 
-    width: 100%;
+    width: auto;
   }
 }
 
@@ -534,8 +534,6 @@ button:hover {
   background-color: #333;
 }
 
-/* NAVBAR NOVO */
-/* HEADER BASE */
 header {
   width: 100%;
   background: #333131;
