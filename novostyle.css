@@ -378,42 +378,72 @@ ul#wrap li span {
   padding: 10px 20px;
   border: none;
   border-radius: 15px;
-  color:  gold;
+  color: gold;
   font-size: 24px;
   margin-bottom: 25px;
 }
 
+
 .link-venda {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  height: 30vh;
-  margin-top: 5px;
-  /* centraliza na tela */
-  margin: 0;
+  padding: 20px 15px;
+  background-color: none;
+  margin-bottom: 20px;
+}
+
+.container {
+  max-width: 900px;
+  margin: 0 auto;
+}
+
+.texto-h2 {
+  font-size: 1.5rem;
+  margin-bottom: 15px;
+  color: gold;
+  text-align: center;
 }
 
 .links-container {
   display: flex;
-  gap: 20px;
-  /* espaço entre os links */
+  flex-direction: column;
+  gap: 10px;
 }
 
 .link {
-  padding: 15px 30px;
+  display: block;
+  padding: 12px 20px;
+  background-color: none;
   border: 2px solid gold;
   border-radius: 15px;
-  text-decoration: none;
   color: gold;
-  font-weight: bold;
-  font-size: 18px;
-  transition: 0.3s;
+  text-decoration: none;
+  border-radius: 6px;
+  transition: background-color 0.3s ease;
+  text-align: center;
 }
 
 .link:hover {
-  background: gold;
-  color: red;
+  background-color: gold;
+  color: #000;
 }
+
+@media (min-width: 768px) {
+  .links-container {
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+
+  .link {
+    flex: 1 1 250px;
+    max-width: 300px;
+  }
+
+  .texto-h2 {
+    font-size: 2rem;
+  }
+}
+
+
 
 .mapa {
   padding: 20px;
