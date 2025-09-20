@@ -16,7 +16,7 @@ body {
 @media (max-width: 768px) {
   body {
     background-attachment: scroll; /* melhora performance no mobile */
-    width: 120%;
+    width: 110%;
   }
 }
 
