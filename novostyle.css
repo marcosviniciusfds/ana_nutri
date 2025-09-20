@@ -421,6 +421,19 @@ ul#wrap li span {
   text-align: center;
 }
 
+.link_2 {
+  display: block;
+  padding: 12px 20px;
+  background-color: none;
+  border: 2px solid gold;
+  border-radius: 15px;
+  color: gold;
+  text-decoration: none;
+  border-radius: 6px;
+  transition: background-color 0.3s ease;
+  text-align: left;
+}
+
 .link:hover {
   background-color: gold;
   color: #000;
