@@ -13,11 +13,27 @@ body {
 
 }
 
+body,
+section {
+  margin: 0;
+  padding: 0;
+}
+
 @media (max-width: 768px) {
   body {
-    background-attachment: scroll; 
+    background-attachment: scroll;
     width: auto;
   }
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+}
+
+img {
+  max-width: 100%;
+  height: auto;
 }
 
 h1 {
@@ -276,8 +292,11 @@ ul#wrap li span {
   overflow: hidden;
 }
 
-.section {
-  padding: 20px;
+section {
+  width: 100%;
+  max-width: 100%;
+  box-sizing: border-box;
+  /* evita que padding aumente a largura */
 }
 
 .cor-back {
@@ -537,7 +556,7 @@ button:hover {
 header {
   width: 100%;
   background: #333131;
-  box-shadow: 0px 2px 5px rgba(0,0,0,0.1);
+  box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.1);
   position: fixed;
   top: 0;
   left: 0;
@@ -574,7 +593,7 @@ nav {
 }
 
 .nav-list li a:hover {
-  color: gold; /* Verde exemplo */
+  color: gold;
 }
 
 /* MOBILE */
