@@ -50,6 +50,10 @@ p {
   color: #f7e380;
 }
 
+.auto-top {
+  padding-top: -2px;
+}
+
 .cor-back {
   background: linear-gradient(105deg, rgba(172, 32, 61, 1) 0%, rgba(166, 35, 61, 1) 67%, rgba(212, 74, 102, 1) 100%);
 }
@@ -101,6 +105,11 @@ p {
 .depoimentos,
 .agendamento {
   padding: 60px 20px;
+  text-align: center;
+}
+
+.section-auto {
+padding: -2px 20px;
   text-align: center;
 }
 
