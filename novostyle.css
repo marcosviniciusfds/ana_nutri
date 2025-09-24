@@ -300,7 +300,6 @@ section {
   width: 100%;
   max-width: 100%;
   box-sizing: border-box;
-  /* evita que padding aumente a largura */
 }
 
 .cor-back {
@@ -313,22 +312,75 @@ section {
   padding: 15p;
 }
 
+.text-1-0 {
+  font-size: 1rem;
+  font-weight: 600;
+  margin-top: 5px;
+}
+
 .text-um {
   margin: auto;
+}
+
+.hero-image-dois {
+  position: relative;
+  width: 100%;
+}
+
+.hero-image-dois img {
+  width: 100%;
+  height: auto;
+  display: block;
+}
+
+.text-dois {
+  width: 100%;
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+  text-align: center;
+  padding: 10px;
+  box-sizing: border-box;
+  max-width: 800px;
+  font-size: 1.2rem;
+  font-weight: 800;
+  margin: auto;
+  padding: 15p;
+  color: #f7e380;
+  padding: 5px 10px;
+  bottom: 5px;
+}
+
+/* Responsividade */
+@media (max-width: 1024px) { 
+  .hero-section {
+    flex-direction: column; 
+    text-align: center; 
+  }
+
+  .hero-image {
+    margin-top: 15px; 
+  }
+}
+
+@media (max-width: 768px) {
+  .text-dois {
+    font-size: 1.1rem;
+    padding: 6px 12px;
+  }
+}
+
+@media (max-width: 480px) {
+  .text-dois {
+    font-size: 1rem;
+    padding: 5px 10px;
+    bottom: 5px;
+  }
 }
 
 .text-font {
   font-size: 1.5rem;
   font-weight: bold;
-}
-
-.hero-image img {
-  border-radius: 10px;
-  opacity: 0.2;
-}
-
-.hero-image-dois img {
-  border-radius: 10px;
 }
 
 .hero-image-tres img {
@@ -337,7 +389,12 @@ section {
 }
 
 .hero-image img {
-  width: 300px;
+  border-radius: 10px;
+  opacity: 0.8;
+}
+
+.hero-image img {
+  width: 500px;
   height: auto;
   display: block;
   margin: 0 auto;
@@ -351,7 +408,14 @@ section {
   padding-top: 4rem;
 }
 
-.hero-image-dois img,
+.hero-image-dois img {
+  width: 500px;
+  height: auto;
+  display: block;
+  margin: 0 auto;
+  border-radius: 10px;
+}
+
 .hero-image-tres img {
   width: 300px;
   height: auto;
@@ -429,6 +493,13 @@ section {
   font-size: 1.5rem;
   margin-bottom: 15px;
   color: gold;
+  text-align: center;
+}
+
+.texto-h2-dois {
+  font-size: 9.5rem;
+  margin-bottom: 15px;
+  color: black;
   text-align: center;
 }
 
