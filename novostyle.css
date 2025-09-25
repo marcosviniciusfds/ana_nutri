@@ -329,6 +329,13 @@ section {
   margin-bottom: 20px;
 }
 
+.text-1-1_2 {
+  font-size: 1.3rem;
+  font-weight: 700;
+  margin-top: 5px;
+  margin-bottom: 20px;
+}
+
 .text-1-1_1 {
   font-size: 1.2rem;
   text-align: justify;
