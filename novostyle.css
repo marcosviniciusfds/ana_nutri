@@ -306,6 +306,10 @@ section {
   background-color: #f4f4f4;
 }
 
+.line-text {
+  line-height: 1.2;
+}
+
 .text {
   max-width: 800px;
   margin: auto;
@@ -316,6 +320,32 @@ section {
   font-size: 1rem;
   font-weight: 600;
   margin-top: 5px;
+}
+
+.text-1-1 {
+  font-size: 1.2rem;
+  font-weight: 600;
+  margin-top: 5px;
+  margin-bottom: 20px;
+}
+
+.text-1-1_1 {
+  font-size: 1.2rem;
+  text-align: justify;
+  margin-top: 5px;
+}
+
+.text-1-2 {
+  font-size: 1.8rem;
+  font-weight: 600;
+  margin-top: 10px;
+}
+
+.text-1-2_2 {
+  font-size: 1.8rem;
+  margin-top: 10px;
+  text-align: left;
+  font-weight: bold;
 }
 
 .text-um {
@@ -352,14 +382,14 @@ section {
 }
 
 /* Responsividade */
-@media (max-width: 1024px) { 
+@media (max-width: 1024px) {
   .hero-section {
-    flex-direction: column; 
-    text-align: center; 
+    flex-direction: column;
+    text-align: center;
   }
 
   .hero-image {
-    margin-top: 15px; 
+    margin-top: 15px;
   }
 }
 

@@ -6,26 +6,40 @@ class MobileNavbar {
     this.activeClass = "active";
 
     this.handleClick = this.handleClick.bind(this);
-  }
-
-
-  animateLinks() {
-    this.navLinks.forEach((link, index) => {
-      link.style.animation
-        ? (link.style.animation = "")
-        : (link.style.animation = `navLinkFade 0.5s ease forwards ${index / 7 + 0.3
-          }s`);
-    });
+    this.handleOutsideClick = this.handleOutsideClick.bind(this);
   }
 
   handleClick() {
     this.navList.classList.toggle(this.activeClass);
     this.mobileMenu.classList.toggle(this.activeClass);
-    this.animateLinks();
+  }
+
+  handleOutsideClick(event) {
+    if (
+      this.navList.classList.contains(this.activeClass) &&
+      !this.navList.contains(event.target) &&
+      !this.mobileMenu.contains(event.target)
+    ) {
+      this.closeMenu();
+    }
+  }
+
+  closeMenu() {
+    this.navList.classList.remove(this.activeClass);
+    this.mobileMenu.classList.remove(this.activeClass);
   }
 
   addClickEvent() {
+    // abrir/fechar no botão
     this.mobileMenu.addEventListener("click", this.handleClick);
+
+    // fechar ao clicar em link
+    this.navLinks.forEach((link) => {
+      link.addEventListener("click", () => this.closeMenu());
+    });
+
+    // fechar ao clicar fora
+    document.addEventListener("click", this.handleOutsideClick);
   }
 
   init() {
@@ -39,8 +53,6 @@ class MobileNavbar {
 const mobileNavbar = new MobileNavbar(
   ".mobile-menu",
   ".nav-list",
-  ".nav-list li",
+  ".nav-list li"
 );
 mobileNavbar.init();
-
-
