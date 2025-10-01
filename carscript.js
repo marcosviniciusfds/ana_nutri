@@ -1,62 +1,68 @@
-const images = document.querySelectorAll(".carousel img");
-const prevBtn = document.querySelector(".prev");
-const nextBtn = document.querySelector(".next");
-const dots = document.querySelectorAll(".dot");
+  document.querySelectorAll('.carousel-container').forEach(container => {
+    const carousel = container.querySelector('.carousel');
+    const images = carousel.querySelectorAll('img');
+    const prevBtn = container.querySelector('.prev');
+    const nextBtn = container.querySelector('.next');
+    const dots = container.querySelectorAll('.dot');
 
-let current = 0;
-let interval;
+    let index = 0;
+    let interval;
 
-function updateCarousel() {
-  images.forEach((img, index) => {
-    img.classList.remove("active");
-    dots[index].classList.remove("active");
-    if (index === current) {
-      img.classList.add("active");
-      dots[index].classList.add("active");
+    // Atualiza exibição de imagens e indicadores
+    function updateCarousel() {
+      images.forEach((img, i) => {
+        img.classList.toggle('active', i === index);
+        img.style.display = i === index ? 'block' : 'none';
+      });
+
+      dots.forEach((dot, i) => {
+        dot.classList.toggle('active', i === index);
+      });
     }
-  });
-}
 
-function showNext() {
-  current = (current + 1) % images.length;
-  updateCarousel();
-}
+    // Avançar
+    function nextSlide() {
+      index = (index + 1) % images.length;
+      updateCarousel();
+    }
 
-function showPrev() {
-  current = (current - 1 + images.length) % images.length;
-  updateCarousel();
-}
+    // Voltar
+    function prevSlide() {
+      index = (index - 1 + images.length) % images.length;
+      updateCarousel();
+    }
 
-function startAutoPlay() {
-  interval = setInterval(showNext, 4000); // muda a cada 4 segundos
-}
+    // Ir para slide específico (clicando na bolinha)
+    dots.forEach(dot => {
+      dot.addEventListener('click', () => {
+        index = parseInt(dot.dataset.index);
+        updateCarousel();
+        resetAutoPlay();
+      });
+    });
 
-function stopAutoPlay() {
-  clearInterval(interval);
-}
+    // Eventos dos botões
+    nextBtn.addEventListener('click', () => {
+      nextSlide();
+      resetAutoPlay();
+    });
 
-// Botões
-prevBtn.addEventListener("click", () => {
-  showPrev();
-  stopAutoPlay();
-  startAutoPlay();
-});
+    prevBtn.addEventListener('click', () => {
+      prevSlide();
+      resetAutoPlay();
+    });
 
-nextBtn.addEventListener("click", () => {
-  showNext();
-  stopAutoPlay();
-  startAutoPlay();
-});
+    // Auto play
+    function startAutoPlay() {
+      interval = setInterval(nextSlide, 3000); // muda a cada 3s
+    }
 
-// Dots
-dots.forEach(dot => {
-  dot.addEventListener("click", (e) => {
-    current = parseInt(e.target.getAttribute("data-index"));
+    function resetAutoPlay() {
+      clearInterval(interval);
+      startAutoPlay();
+    }
+
+    // Inicializa carrossel
     updateCarousel();
-    stopAutoPlay();
     startAutoPlay();
   });
-});
-
-updateCarousel();
-startAutoPlay();
