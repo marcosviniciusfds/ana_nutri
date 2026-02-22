@@ -4,39 +4,52 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Ana Paula Andrade Nutricionista</title>
-  <meta name="description" content="Ana Paula Andrade, especializada em saúde e bem-estar. Agende sua consulta.">
-  <meta name="keywords" content="Saúde, Estética, Consulta.">
-  <meta name="author" content="Ana Paula Nutricionista">
-
-  <!-- CARROSSEL NOVO -->
+  <title>Ana Paula Andrade | Nutricionista Funcional</title>
+  <meta name="description"
+    content="Ana Paula Andrade, nutricionista funcional especializada em saúde, emagrecimento e bem-estar. Agende sua consulta.">
+  <meta name="keywords" content="nutricionista, emagrecimento saudável, nutrição funcional, consulta nutricional">
+  <meta name="author" content="Ana Paula Andrade">
+  <meta name="robots" content="index, follow">
+  <meta http-equiv="X-Content-Type-Options" content="nosniff">
+  <meta http-equiv="X-Frame-Options" content="SAMEORIGIN">
+  <meta http-equiv="X-XSS-Protection" content="1; mode=block">
+  <meta property="og:title" content="Ana Paula Andrade | Nutricionista Funcional">
+  <meta property="og:description" content="Transforme sua saúde com acompanhamento nutricional personalizado.">
+  <meta property="og:type" content="website">
+  <meta property="og:image" content="https://seusite.com/imagem/capa.jpg">
+  <meta property="og:url" content="https://seusite.com">
+  <link rel="preconnect" href="https://cdn.jsdelivr.net">
+  <link rel="preconnect" href="https://cdnjs.cloudflare.com">
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@12/swiper-bundle.min.css" />
   <link rel="stylesheet" href="css/main.css">
-
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
   <link rel="stylesheet" href="css-style.css">
-
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
   <link rel="icon" href="imagem/logo_ana-sinza_inic-2026.png">
+  <meta http-equiv="Content-Security-Policy"
+    content="default-src 'self' https: data: blob: 'unsafe-inline' 'unsafe-eval';">
 </head>
 
 <body>
   <header>
     <nav>
       <a class="logo">Ana Paula Andrade | Nutricionista Funcional</a>
+
       <div class="mobile-menu">
         <div class="line1"></div>
         <div class="line2"></div>
         <div class="line3"></div>
       </div>
+
       <ul class="nav-list">
         <li><a href="#inicio">Início</a></li>
         <li><a href="https://wa.me/+5585985279267" target="_blank">WhatsApp</a></li>
-        <li><a href="https://www.instagram.com/nutrianapaulaandrade/#" target="_blank">Instagram</a></li>
+        <li><a href="https://www.instagram.com/nutrianapaulaandrade/" target="_blank">Instagram</a></li>
         <li><a href="#telefone">Contato</a></li>
         <li><a href="#vendas">Vendas</a></li>
       </ul>
     </nav>
   </header>
+
   <script src="mobile-navbar.js"></script>
 
   <section class="section cor-back" id="inicio">
@@ -179,7 +192,6 @@
 
     <div class="box gallery-1">
 
-      <!-- SLIDE PRINCIPAL -->
       <div class="swiper slide-imagens">
         <div class="swiper-wrapper">
           <div class="swiper-slide"><img src="img/slide-01.png" alt=""></div>
@@ -202,7 +214,7 @@
           <div class="swiper-slide"><img src="img/slide-18.png" alt=""></div>
         </div>
       </div>
-      <!-- THUMBNAILS -->
+
       <div class="swiper slide-thumbnail">
         <div class="swiper-wrapper">
           <div class="swiper-slide"><img src="img/slide-01.png" alt=""></div>
@@ -239,7 +251,7 @@
 
     <div class="box gallery-2">
 
-      <!-- SLIDE PRINCIPAL -->
+
       <div class="swiper slide-imagens">
         <div class="swiper-wrapper">
           <div class="swiper-slide"><img src="img/slide-001.png" alt=""></div>
@@ -255,7 +267,7 @@
           <div class="swiper-slide"><img src="img/slide-011.png" alt=""></div>
         </div>
       </div>
-      <!-- THUMBNAILS -->
+
       <div class="swiper slide-thumbnail">
         <div class="swiper-wrapper">
           <div class="swiper-slide"><img src="img/slide-001.png" alt=""></div>
@@ -277,6 +289,8 @@
     <script src="./js/scripts.js"></script>
 
   </section>
+
+  <script src="carscript.js"></script>
 
   <section class="link-venda" id="vendas">
     <div class="container">
@@ -330,8 +344,6 @@
     </div>
   </section>
 
-  <script src="carscript.js"></script>
-
   <section id="agendamento" class="agendamento">
     <h2>Agende sua Consulta</h2>
     <form id="form-agendamento">
@@ -382,6 +394,30 @@
   </footer>
 
   <script src="script.js"></script>
+
+  <script>
+    document.addEventListener("contextmenu", function (e) {
+      e.preventDefault();
+    });
+    document.addEventListener("keydown", function (e) {
+      if (e.key === "F12") {
+        e.preventDefault();
+      }
+      if (e.ctrlKey && e.shiftKey && e.key === "I") {
+        e.preventDefault();
+      }
+      if (e.ctrlKey && e.shiftKey && e.key === "J") {
+        e.preventDefault();
+      }
+      if (e.ctrlKey && e.key === "u") {
+        e.preventDefault();
+      }
+      if (e.ctrlKey && e.key === "s") {
+        e.preventDefault();
+      }
+    });
+  </script>
+
 </body>
 
 </html>
