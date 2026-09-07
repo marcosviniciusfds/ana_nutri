@@ -28,9 +28,6 @@ body {
     overflow-x: hidden;
 }
 
-/* ===========================
-   BOTÃO
-=========================== */
 
 .footer-container {
     width: 100%;
@@ -243,10 +240,6 @@ CARD DESTAQUE
     pointer-events: none;
 
 }
-
-/* ===========================
-   EFEITO CLOW
-=========================== */
 
 .card:hover {
 
